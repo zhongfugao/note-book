@@ -1,0 +1,55 @@
+* 如何执行脚本
+** source执行
++ source filename
++ 该命令可以执行无"执行权限"的文件
++ 该命令可以用. 来代替
++ source是bash shell的内置命令
+
+** sh和bash的用法
++ 可以执行无"执行权限"
+
+** ./filename的用法
++ 作用：打开一个子shell来读取并执行filename种的命令
+
+** shell嵌入命令
++ : 空，永远返回为true
++ .   从当前shell中执行操作
++ break 退出for、while、until或case语句
++ cd 改变到当前目录
++ continue 执行循环的下一步
++ echo 反馈信息到标准输出
++ eval 读取参数，执行结果命令
++ exec 执行命令，但不在当前shell
++ exit 退出当前shell
++ export 导出变量，使当前shell可利用它
++ pwd 显示当前目录
++ read 从标准输入读取一行文本
++ readonly 使变量只读
++ return 退出函数并带有返回值
++ set 控制各种参数到标准输出的显示
++ shift 命令行参数向左偏移一个
++ test 评估条件表达式
++ times 显示shell运行过程的用户和系统时间
++ trap 当捕获信号时运行指定命令
++ ulimit 显示或设置shell资源
++ umask 显示或设置缺省文件创建模式
++ unset 从shell内存中删除变量或函数
++ wait 等待直到子进程运行完毕
+
+
+* org mode使用
+** TODO的使用
+**** 更改TODO的状态
+- C-x C-t :: 事项状态进行循环变化
+- S-left S-right :: 功能同 C-x C-t
+- C-u C-c C-t :: 指定状态
+- S-up/down :: 指定事项的优先级
+- C-c / t :: 可以显示所有的TODO项目，能从所有agenda file里非DONE状态的TODO项目都显示出来
+- S-M-RET :: new todo
+
+* emacs使用
+** 快捷键
+*** basic
+- S :: 一般是指shift键，也有说是super键，即M键
+
+* idea list
