@@ -1,0 +1,67 @@
+;;markdown mode
+(add-to-list 'load-path "~/.emacs.d/plugin/markdown-mode")
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
+
+;;auctex & latex
+(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/site-lisp")
+(setenv "PATH" (concat "/usr/texbin:/usr/local/bin:" (getenv "PATH")))
+(setq exec-path (append '("/usr/texbin" "/usr/local/bin") exec-path))
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+
+;;elisp learning
+(load "~/work/elisp/wizard-adventure-emacs.el")
+
+;;w3m
+(add-to-list 'load-path "~/.emacs.d/plugin/w3m")
+(require 'w3m-load)
+;;(require 'mime-w3m)
+
+;;nxhtml
+;;(load "~/.emacs.d/plugin/nxhtml/autostart.el")
+
+;;evernote
+(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-O" "UTF8"))
+(add-to-list 'load-path "~/.emacs.d/plugin/evernote")
+(setq evernote-ruby-command "/usr/bin/ruby")
+(require 'evernote-mode)
+
+;;evernote + org mode
+(add-hook 'org-remember-before-finalize-hook 'evernote-this-org-note)
+(defun evernote-this-org-note(&optional arg)
+  "select note"
+  (interactive "P")
+  (beginning-of-buffer)
+  (re-search-forward "^\*.*")
+  (backward-word 1)
+  (beginning-of-line )
+  (copy-line)
+  (forward-line)
+  (evernote-post-region-4-org-mode (point) (point-max) "test")
+)
+
+(defun evernote-post-region-4-org-mode (begin end arg)
+  "Post the region as a note"
+  (interactive "r\np")
+  (enh-command-with-auth
+   (save-excursion
+     (save-restriction
+       (narrow-to-region begin end)
+       (if (and (enutil-neq arg nil) (enutil-neq arg 1))
+
+;           (pop-to-buffer (enh-base-create-note-common (buffer-name) t t t))
+         (enh-base-create-note-common (current-kill 0) nil nil
+nil t))))))
+
+;;cedet
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/plugin/cedet/common"))
+(load-file "~/.emacs.d/plugin/cedet/common/cedet.el")
+
+;;jde
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/plugin/jde/lisp"))
+(require 'jde)
+
+
+;;debug on
+;;(setq debug-on-error t)

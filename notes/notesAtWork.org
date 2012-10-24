@@ -1,0 +1,17 @@
+* mysql
+** alter column
++ alter table CAL_EVENT change column recurrentEndTime recurrenceId datetime;
++ alter table CAL_EVENT drop column recurrenceId; 
+
+* java
+** change an object to list
++ Arrays.asList
+
+* work todo list
+** recurrence meeting tr fixing list
+*** TODO ongoing conference can be delete and updaete.
+*** TODO overdue conference, some case can be created.
+*** TODO set the id of the two objects to be null.
+*** TODO edible plugin update.
+*** TODO subject 255-> 250
+*** TODO bt: email  
