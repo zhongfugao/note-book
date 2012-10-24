@@ -53,3 +53,4 @@
 - S :: 一般是指shift键，也有说是super键，即M键
 
 * idea list
+- happens to gitt?
