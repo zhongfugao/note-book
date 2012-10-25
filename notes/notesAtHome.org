@@ -1,3 +1,30 @@
+
+* org mode使用
+** TODO的使用
+**** 更改TODO的状态
+- C-x C-t :: 事项状态进行循环变化
+- S-left S-right :: 功能同 C-x C-t
+- C-u C-c C-t :: 指定状态
+- S-up/down :: 指定事项的优先级
+- C-c / t :: 可以显示所有的TODO项目，能从所有agenda file里非DONE状态的TODO项目都显示出来
+- S-M-RET :: new todo
+
+** source code编辑
+*** 范例  
+  #+NAME: <name>
+  #+BEGIN_SRC <language> <switches> <header arguments>
+       <body>
+  #+END_SRC
+*** 操作命令
++ C-c ' :: 进入和退出当前编辑的程序语言mode下编辑
+
+*** 类似的引用文字
+  #+BEGIN_EXAMPLE
+       文字引用
+  #+END_EXAMPLE
+
+
+
 * 如何执行脚本
 ** source执行
 + source filename
@@ -36,21 +63,18 @@
 + unset 从shell内存中删除变量或函数
 + wait 等待直到子进程运行完毕
 
-
-* org mode使用
-** TODO的使用
-**** 更改TODO的状态
-- C-x C-t :: 事项状态进行循环变化
-- S-left S-right :: 功能同 C-x C-t
-- C-u C-c C-t :: 指定状态
-- S-up/down :: 指定事项的优先级
-- C-c / t :: 可以显示所有的TODO项目，能从所有agenda file里非DONE状态的TODO项目都显示出来
-- S-M-RET :: new todo
-
 * emacs使用
 ** 快捷键
 *** basic
 - S :: 一般是指shift键，也有说是super键，即M键
-
+* ruby学习
+** ruby是面向对象的
 * idea list
-- happens to gitt?
+* vim使用
+** changing color scheme
++ :之后内容可通过vi命令模式自动检索
+  #+BEGIN_SRC shell
+       :colorscheme mycolors
+  #+END_SRC
+
+
