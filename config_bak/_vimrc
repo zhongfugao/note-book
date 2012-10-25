@@ -1,0 +1,35 @@
+"Font
+"set guifont=Courier\ New\ 12
+
+"color scheme
+"colorscheme koehler 
+
+"auto indent 缩进
+set ai
+
+"smart indent
+set si
+
+"vim history line number
+set history=100
+
+"always show current position
+set ruler
+
+"syntax hl
+syntax on
+
+"highlight current line
+set cursorline
+
+"show line number
+set nu
+
+"highlight search
+set hlsearch
+
+"enable file type plugin
+filetype plugin on
+
+"turn on backup
+"set backup
