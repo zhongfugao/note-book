@@ -1,8 +1,11 @@
 "Font
-"set guifont=Courier\ New\ 12
+set guifont=Courier\ New\ 12
+
+"background
+"set background=dark
 
 "color scheme
-"colorscheme koehler 
+colorscheme koehler 
 
 "auto indent 缩进
 set ai
@@ -11,19 +14,25 @@ set ai
 set si
 
 "vim history line number
-set history=100
+set history=400
 
 "always show current position
 set ruler
 
 "syntax hl
-syntax on
+syntax enable
 
 "highlight current line
 set cursorline
 
 "show line number
-set nu
+"set nu
+
+"commander bar hight
+set cmdheight=2
+
+"set backspace
+set backspace=eol,start,indent
 
 "highlight search
 set hlsearch

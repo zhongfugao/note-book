@@ -1,0 +1,14 @@
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+GEM_BIN_PATH=$HOME/.rvm/gems/ruby-1.9.3-p194/bin:$HOME/.rvm/gems/ruby-1.9.3-p194@global/bin #Add GEM path
+RVM_PATH=$HOME/.rvm/rubies/ruby-1.9.3-p194/bin:$HOME/.rvm/bin #Add ruby path
+export PATH="$GEM_BIN_PATH:$RVM_PATH:/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+export GEM_HOME=/Users/gaozhongfu/.rvm/gems/ruby-1.9.3-p194
+export GEM_PATH=/Users/gaozhongfu/.rvm/gems/ruby-1.9.3-p194:/Users/gaozhongfu/.rvm/gems/ruby-1.9.3-p194@global
+
+if [ -f ~/.bashrc ] ; then
+	. .bashrc
+fi
